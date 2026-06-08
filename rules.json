@@ -1,0 +1,2634 @@
+[
+  {
+    "name": "Threat.Test.EICAR",
+    "description": "EICAR Standard Antivirus Test File signature",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "X5O!P%@AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*"
+      }
+    ]
+  },
+  {
+    "name": "Trojan.PHP.Webshell",
+    "description": "Suspicious PHP web shell functions (eval/base64 dropper or terminal command execution)",
+    "severity": "suspicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "eval(base64_decode"
+      },
+      {
+        "type": "text",
+        "value": "system($_GET"
+      },
+      {
+        "type": "text",
+        "value": "shell_exec($_POST"
+      },
+      {
+        "type": "text",
+        "value": "passthru($_GET"
+      },
+      {
+        "type": "text",
+        "value": "exec($_POST"
+      }
+    ]
+  },
+  {
+    "name": "Ransomware.Note.Indicator",
+    "description": "Text pattern typical of a ransomware demand notice",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "all your files have been encrypted"
+      },
+      {
+        "type": "text",
+        "value": "your files are encrypted"
+      },
+      {
+        "type": "text",
+        "value": "YOUR_FILES_ARE_LOCKED"
+      },
+      {
+        "type": "text",
+        "value": "restore_files_instructions"
+      },
+      {
+        "type": "text",
+        "value": "decrypt files contact"
+      }
+    ]
+  },
+  {
+    "name": "HackTool.Powershell.Downloader",
+    "description": "Suspicious PowerShell outbound file downloader script",
+    "severity": "suspicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Net.WebClient"
+      },
+      {
+        "type": "text",
+        "value": "DownloadFile"
+      },
+      {
+        "type": "text",
+        "value": "bypass"
+      }
+    ]
+  },
+  {
+    "name": "APT.LIGHTDART_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "ret.log"
+      },
+      {
+        "type": "text",
+        "value": "Microsoft Internet Explorer 6.0"
+      },
+      {
+        "type": "text",
+        "value": "szURL Fail"
+      },
+      {
+        "type": "text",
+        "value": "szURL Successfully"
+      },
+      {
+        "type": "text",
+        "value": "%s&sdate=%04ld-%02ld-%02ld"
+      }
+    ]
+  },
+  {
+    "name": "APT.AURIGA_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "superhard corp."
+      },
+      {
+        "type": "text",
+        "value": "microsoft corp."
+      },
+      {
+        "type": "text",
+        "value": "[Insert]"
+      },
+      {
+        "type": "text",
+        "value": "[Delete]"
+      },
+      {
+        "type": "text",
+        "value": "[End]"
+      },
+      {
+        "type": "text",
+        "value": "!(*@)(!@KEY"
+      },
+      {
+        "type": "text",
+        "value": "!(*@)(!@SID="
+      }
+    ]
+  },
+  {
+    "name": "APT.AURIGA_driver_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Services\\riodrv32"
+      },
+      {
+        "type": "text",
+        "value": "riodrv32.sys"
+      },
+      {
+        "type": "text",
+        "value": "svchost.exe"
+      },
+      {
+        "type": "text",
+        "value": "wuauserv.dll"
+      },
+      {
+        "type": "text",
+        "value": "arp.exe"
+      },
+      {
+        "type": "text",
+        "value": "projects\\auriga"
+      }
+    ]
+  },
+  {
+    "name": "APT.BANGAT_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "superhard corp."
+      },
+      {
+        "type": "text",
+        "value": "microsoft corp."
+      },
+      {
+        "type": "text",
+        "value": "[Insert]"
+      },
+      {
+        "type": "text",
+        "value": "[Delete]"
+      },
+      {
+        "type": "text",
+        "value": "[End]"
+      },
+      {
+        "type": "text",
+        "value": "!(*@)(!@KEY"
+      },
+      {
+        "type": "text",
+        "value": "!(*@)(!@SID="
+      },
+      {
+        "type": "text",
+        "value": "end      binary output"
+      },
+      {
+        "type": "text",
+        "value": "XriteProcessMemory"
+      },
+      {
+        "type": "text",
+        "value": "IE:Password-Protected sites"
+      },
+      {
+        "type": "text",
+        "value": "pstorec.dll"
+      }
+    ]
+  },
+  {
+    "name": "APT.BISCUIT_GREENCAT_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "zxdosml"
+      },
+      {
+        "type": "text",
+        "value": "get user name error!"
+      },
+      {
+        "type": "text",
+        "value": "get computer name error!"
+      },
+      {
+        "type": "text",
+        "value": "----client system info----"
+      },
+      {
+        "type": "text",
+        "value": "stfile"
+      },
+      {
+        "type": "text",
+        "value": "cmd success!"
+      }
+    ]
+  },
+  {
+    "name": "APT.BOUNCER_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "*Qd9kdgba33*%Wkda0Qd3kvn$*&><(*&%$E#%$#1234asdgKNAg@!gy565dtfbasdg"
+      },
+      {
+        "type": "text",
+        "value": "IDR_DATA%d"
+      },
+      {
+        "type": "text",
+        "value": "asdfqwe123cxz"
+      },
+      {
+        "type": "text",
+        "value": "Mode must be 0(encrypt) or 1(decrypt)."
+      }
+    ]
+  },
+  {
+    "name": "APT.BOUNCER_DLL_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "new_connection_to_bounce():"
+      },
+      {
+        "type": "text",
+        "value": "usage:%s IP port [proxip] [port] [key]"
+      }
+    ]
+  },
+  {
+    "name": "APT.CALENDAR_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "content"
+      },
+      {
+        "type": "text",
+        "value": "title"
+      },
+      {
+        "type": "text",
+        "value": "entry"
+      },
+      {
+        "type": "text",
+        "value": "feed"
+      },
+      {
+        "type": "text",
+        "value": "DownRun success"
+      },
+      {
+        "type": "text",
+        "value": "%s@gmail.com"
+      },
+      {
+        "type": "text",
+        "value": "<!--%s-->"
+      },
+      {
+        "type": "text",
+        "value": "W4qKihsb+So="
+      },
+      {
+        "type": "text",
+        "value": "PoqKigY7ggH+VcnqnTcmhFCo9w=="
+      },
+      {
+        "type": "text",
+        "value": "8oqKiqb5880/uJLzAsY="
+      }
+    ]
+  },
+  {
+    "name": "APT.COMBOS_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Mozilla4.0 (compatible; MSIE 7.0; Win32)"
+      },
+      {
+        "type": "text",
+        "value": "Mozilla5.1 (compatible; MSIE 8.0; Win32)"
+      },
+      {
+        "type": "text",
+        "value": "Delay"
+      },
+      {
+        "type": "text",
+        "value": "Getfile"
+      },
+      {
+        "type": "text",
+        "value": "Putfile"
+      },
+      {
+        "type": "text",
+        "value": "---[ Virtual Shell]---"
+      },
+      {
+        "type": "text",
+        "value": "Not Comming From Our Server %s."
+      }
+    ]
+  },
+  {
+    "name": "APT.DAIRY_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Mozilla/4.0 (compatible; MSIE 7.0;)"
+      },
+      {
+        "type": "text",
+        "value": "KilFail"
+      },
+      {
+        "type": "text",
+        "value": "KilSucc"
+      },
+      {
+        "type": "text",
+        "value": "pkkill"
+      },
+      {
+        "type": "text",
+        "value": "pklist"
+      }
+    ]
+  },
+  {
+    "name": "APT.GLOOXMAIL_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Kill process success!"
+      },
+      {
+        "type": "text",
+        "value": "Kill process failed!"
+      },
+      {
+        "type": "text",
+        "value": "Sleep success!"
+      },
+      {
+        "type": "text",
+        "value": "based on gloox"
+      },
+      {
+        "type": "text",
+        "value": "glooxtest.pdb"
+      }
+    ]
+  },
+  {
+    "name": "APT.GOGGLES_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Kill process success!"
+      },
+      {
+        "type": "text",
+        "value": "Kill process failed!"
+      },
+      {
+        "type": "text",
+        "value": "Sleep success!"
+      },
+      {
+        "type": "text",
+        "value": "based on gloox"
+      },
+      {
+        "type": "text",
+        "value": "glooxtest.pdb"
+      }
+    ]
+  },
+  {
+    "name": "APT.HACKSFASE1_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "hex",
+        "value": "cb 39 82 49 42 be 1f 3a"
+      }
+    ]
+  },
+  {
+    "name": "APT.HACKSFASE2_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Send to Server failed."
+      },
+      {
+        "type": "text",
+        "value": "HandShake with the server failed. Error:"
+      },
+      {
+        "type": "text",
+        "value": "Decryption Failed. Context Expired."
+      }
+    ]
+  },
+  {
+    "name": "APT.KURTON_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Mozilla/4.0 (compatible; MSIE8.0; Windows NT 5.1)"
+      },
+      {
+        "type": "text",
+        "value": "!(*@)(!@PORT!(*@)(!@URL"
+      },
+      {
+        "type": "text",
+        "value": "MyTmpFile.Dat"
+      },
+      {
+        "type": "text",
+        "value": "SvcHost.DLL.log"
+      }
+    ]
+  },
+  {
+    "name": "APT.LONGRUN_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Mozilla/4.0 (compatible; Windows NT 5.1; MSIE 7.0; Trident/4.0)"
+      },
+      {
+        "type": "text",
+        "value": "%s\\%c%c%c%c%c%c%c"
+      },
+      {
+        "type": "text",
+        "value": "wait:"
+      },
+      {
+        "type": "text",
+        "value": "Dcryption Error! Invalid Character"
+      }
+    ]
+  },
+  {
+    "name": "APT.MACROMAIL_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "svcMsn.dll"
+      },
+      {
+        "type": "text",
+        "value": "RundllInstall"
+      },
+      {
+        "type": "text",
+        "value": "Config service %s ok."
+      },
+      {
+        "type": "text",
+        "value": "svchost.exe"
+      }
+    ]
+  },
+  {
+    "name": "APT.MANITSME_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Install an Service hosted by SVCHOST."
+      },
+      {
+        "type": "text",
+        "value": "The Dll file that to be released."
+      },
+      {
+        "type": "text",
+        "value": "SYSTEM\\CurrentControlSet\\Services\\"
+      },
+      {
+        "type": "text",
+        "value": "svchost.exe"
+      },
+      {
+        "type": "text",
+        "value": "Man,it's me"
+      },
+      {
+        "type": "text",
+        "value": "Oh,shit"
+      },
+      {
+        "type": "text",
+        "value": "Hallelujah"
+      },
+      {
+        "type": "text",
+        "value": "nRet == SOCKET_ERROR"
+      },
+      {
+        "type": "text",
+        "value": "rouji\\release\\Install.pdb"
+      },
+      {
+        "type": "text",
+        "value": "rouji\\SvcMain.pdb"
+      }
+    ]
+  },
+  {
+    "name": "APT.MINIASP_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "miniasp"
+      },
+      {
+        "type": "text",
+        "value": "wakeup="
+      },
+      {
+        "type": "text",
+        "value": "download ok!"
+      },
+      {
+        "type": "text",
+        "value": "command is null!"
+      },
+      {
+        "type": "text",
+        "value": "device_input.asp?device_t="
+      }
+    ]
+  },
+  {
+    "name": "APT.NEWSREELS_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Mozilla/4.0 (compatible; Windows NT 5.1; MSIE 7.0)"
+      },
+      {
+        "type": "text",
+        "value": "name=%s&userid=%04d&other=%c%s"
+      },
+      {
+        "type": "text",
+        "value": "download ok!"
+      },
+      {
+        "type": "text",
+        "value": "command is null!"
+      },
+      {
+        "type": "text",
+        "value": "noclient"
+      },
+      {
+        "type": "text",
+        "value": "wait"
+      },
+      {
+        "type": "text",
+        "value": "active"
+      },
+      {
+        "type": "text",
+        "value": "hello"
+      }
+    ]
+  },
+  {
+    "name": "APT.SEASALT_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "User-Agent: Mozilla/4.0 (compatible; MSIE 5.00; Windows 98) KSMM"
+      },
+      {
+        "type": "text",
+        "value": "upfileok"
+      },
+      {
+        "type": "text",
+        "value": "download ok!"
+      },
+      {
+        "type": "text",
+        "value": "upfileer"
+      },
+      {
+        "type": "text",
+        "value": "fxftest"
+      }
+    ]
+  },
+  {
+    "name": "APT.STARSYPOUND_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "*(SY)# cmd"
+      },
+      {
+        "type": "text",
+        "value": "send = %d"
+      },
+      {
+        "type": "text",
+        "value": "cmd.exe"
+      },
+      {
+        "type": "text",
+        "value": "*(SY)#"
+      }
+    ]
+  },
+  {
+    "name": "APT.SWORD_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "@***@*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>"
+      },
+      {
+        "type": "text",
+        "value": "sleep:"
+      },
+      {
+        "type": "text",
+        "value": "down:"
+      },
+      {
+        "type": "text",
+        "value": "*========== Bye Bye ! ==========*"
+      }
+    ]
+  },
+  {
+    "name": "APT.thequickbrow_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "thequickbrownfxjmpsvalzydg"
+      }
+    ]
+  },
+  {
+    "name": "APT.TABMSGSQL_APT1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "letusgohtppmmv2.0.0.1"
+      },
+      {
+        "type": "text",
+        "value": "Mozilla/4.0 (compatible; )"
+      },
+      {
+        "type": "text",
+        "value": "filestoc"
+      },
+      {
+        "type": "text",
+        "value": "filectos"
+      },
+      {
+        "type": "text",
+        "value": "reshell"
+      }
+    ]
+  },
+  {
+    "name": "APT.CCREWBACK1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "postvalue"
+      },
+      {
+        "type": "text",
+        "value": "postdata"
+      },
+      {
+        "type": "text",
+        "value": "postfile"
+      },
+      {
+        "type": "text",
+        "value": "hostname"
+      },
+      {
+        "type": "text",
+        "value": "clientkey"
+      },
+      {
+        "type": "text",
+        "value": "start Cmd Failure!"
+      },
+      {
+        "type": "text",
+        "value": "sleep:"
+      },
+      {
+        "type": "text",
+        "value": "downloadcopy:"
+      },
+      {
+        "type": "text",
+        "value": "download:"
+      },
+      {
+        "type": "text",
+        "value": "geturl:"
+      },
+      {
+        "type": "text",
+        "value": "1.234.1.68"
+      }
+    ]
+  },
+  {
+    "name": "APT.TrojanCookies_CCREW",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "sleep:"
+      },
+      {
+        "type": "text",
+        "value": "content="
+      },
+      {
+        "type": "text",
+        "value": "reqpath="
+      },
+      {
+        "type": "text",
+        "value": "savepath="
+      },
+      {
+        "type": "text",
+        "value": "command="
+      }
+    ]
+  },
+  {
+    "name": "APT.GEN_CCREW1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "W!r@o#n$g"
+      },
+      {
+        "type": "text",
+        "value": "KerNel32.dll"
+      }
+    ]
+  },
+  {
+    "name": "APT.Elise",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "SetElise.pdb"
+      }
+    ]
+  },
+  {
+    "name": "APT.EclipseSunCloudRAT",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Eclipse_A"
+      },
+      {
+        "type": "text",
+        "value": "\\PJTS\\"
+      },
+      {
+        "type": "text",
+        "value": "Eclipse_Client_B.pdb"
+      },
+      {
+        "type": "text",
+        "value": "XiaoME"
+      },
+      {
+        "type": "text",
+        "value": "SunCloud-Code"
+      },
+      {
+        "type": "text",
+        "value": "/uc_server/data/forum.asp"
+      }
+    ]
+  },
+  {
+    "name": "APT.MoonProject",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Serverfile is smaller than Clientfile"
+      },
+      {
+        "type": "text",
+        "value": "\\M tools\\"
+      },
+      {
+        "type": "text",
+        "value": "MoonDLL"
+      },
+      {
+        "type": "text",
+        "value": "\\M tools\\"
+      }
+    ]
+  },
+  {
+    "name": "APT.ccrewDownloader1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "hex",
+        "value": "DD B5 61 F0 20 47 20 57 D6 65 9C CB 31 1B 65 42"
+      }
+    ]
+  },
+  {
+    "name": "APT.ccrewDownloader2",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "3gZFQOBtY3sifNOl"
+      },
+      {
+        "type": "text",
+        "value": "docbWUWsc2gRMv9HN7TFnvnKcrWUUFdAEem9DkqRALoD"
+      },
+      {
+        "type": "text",
+        "value": "6QVSOZHQPCMc2A8HXdsfuNZcmUnIqWrOIjrjwOeagILnnScxadKEr1H2MZNwSnaJ"
+      }
+    ]
+  },
+  {
+    "name": "APT.ccrewMiniasp",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "MiniAsp.pdb"
+      },
+      {
+        "type": "text",
+        "value": "device_t="
+      }
+    ]
+  },
+  {
+    "name": "APT.ccrewSSLBack2",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "hex",
+        "value": "39 82 49 42 BE 1F 3A"
+      }
+    ]
+  },
+  {
+    "name": "APT.ccrewSSLBack3",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "SLYHKAAY"
+      }
+    ]
+  },
+  {
+    "name": "APT.ccrewSSLBack1",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "!@#%$^#@!"
+      },
+      {
+        "type": "text",
+        "value": "64.91.80.6"
+      }
+    ]
+  },
+  {
+    "name": "APT.ccrewDownloader3",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "ejlcmbv"
+      },
+      {
+        "type": "text",
+        "value": "bhxjuisv"
+      },
+      {
+        "type": "text",
+        "value": "yqzgrh"
+      },
+      {
+        "type": "text",
+        "value": "uqusofrp"
+      },
+      {
+        "type": "text",
+        "value": "Ljpltmivvdcbb"
+      },
+      {
+        "type": "text",
+        "value": "frfogjviirr"
+      },
+      {
+        "type": "text",
+        "value": "ximhttoskop"
+      }
+    ]
+  },
+  {
+    "name": "APT.ccrewQAZ",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "!QAZ@WSX"
+      }
+    ]
+  },
+  {
+    "name": "APT.metaxcd",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "<meta xcd="
+      }
+    ]
+  },
+  {
+    "name": "APT.MiniASP",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "hex",
+        "value": "71 30 6E 63 39 77 38 65 64 61 6F 69 75 6B 32 6D 7A 72 66 79 33 78 74 31 70 35 6C 73 36 37 67 34 62 76 68 6A"
+      },
+      {
+        "type": "text",
+        "value": "MiniAsp.pdb"
+      }
+    ]
+  },
+  {
+    "name": "APT.DownloaderPossibleCCrew",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "%s?%.6u"
+      },
+      {
+        "type": "text",
+        "value": "szFileUrl=%s"
+      },
+      {
+        "type": "text",
+        "value": "status=%u"
+      },
+      {
+        "type": "text",
+        "value": "down file success"
+      },
+      {
+        "type": "text",
+        "value": "Mozilla/4.0 (compatible; MSIE 6.0; Win32)"
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_MAPIGET",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "%s\\Attachment.dat"
+      },
+      {
+        "type": "text",
+        "value": "MyOutlook"
+      },
+      {
+        "type": "text",
+        "value": "mail.txt"
+      },
+      {
+        "type": "text",
+        "value": "Recv Time:"
+      },
+      {
+        "type": "text",
+        "value": "Subject:"
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_LIGHTBOLT",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "bits.exe"
+      },
+      {
+        "type": "text",
+        "value": "PDFBROW"
+      },
+      {
+        "type": "text",
+        "value": "Browser.exe"
+      },
+      {
+        "type": "text",
+        "value": "Protect!"
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_GETMAIL",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "pls give the FULL path"
+      },
+      {
+        "type": "text",
+        "value": "mapi32.dll"
+      },
+      {
+        "type": "text",
+        "value": "doCompress"
+      },
+      {
+        "type": "text",
+        "value": "getmail.dll"
+      },
+      {
+        "type": "text",
+        "value": "doCompress"
+      },
+      {
+        "type": "text",
+        "value": "love"
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_GDOCUPLOAD",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "name=\"GALX\""
+      },
+      {
+        "type": "text",
+        "value": "User-Agent: Shockwave Flash"
+      },
+      {
+        "type": "text",
+        "value": "add cookie failed..."
+      },
+      {
+        "type": "text",
+        "value": ",speed=%f"
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_WEBC2_Y21K",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Y29ubmVjdA"
+      },
+      {
+        "type": "text",
+        "value": "c2xlZXA"
+      },
+      {
+        "type": "text",
+        "value": "cXVpdA"
+      },
+      {
+        "type": "text",
+        "value": "Y21k"
+      },
+      {
+        "type": "text",
+        "value": "dW5zdXBwb3J0"
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_WEBC2_YAHOO",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "HTTP/1.0"
+      },
+      {
+        "type": "text",
+        "value": "Content-Type:"
+      },
+      {
+        "type": "text",
+        "value": "IPHONE8.5(host:%s,ip:%s)"
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_WEBC2_UGX",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "SOFTWARE\\MICROSOFT\\WINDOWS\\CURRENTVERSION\\RUN"
+      },
+      {
+        "type": "text",
+        "value": "DefWatch.exe"
+      },
+      {
+        "type": "text",
+        "value": "index1.html"
+      },
+      {
+        "type": "text",
+        "value": "!@#tiuq#@!"
+      },
+      {
+        "type": "text",
+        "value": "!@#dmc#@!"
+      },
+      {
+        "type": "text",
+        "value": "!@#troppusnu#@!"
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_WEBC2_TOCK",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "InprocServer32"
+      },
+      {
+        "type": "text",
+        "value": "HKEY_PERFORMANCE_DATA"
+      },
+      {
+        "type": "text",
+        "value": "<!---[<if IE 5>]id="
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_WEBC2_TABLE",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Fail To Execute The Command"
+      },
+      {
+        "type": "text",
+        "value": "Execute The Command Successfully"
+      },
+      {
+        "type": "text",
+        "value": "GIF89"
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_WEBC2_RAVE",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "iniet.exe"
+      },
+      {
+        "type": "text",
+        "value": "cmd.exe"
+      },
+      {
+        "type": "text",
+        "value": "SYSTEM\\CurrentControlSet\\Services\\DEVFS"
+      },
+      {
+        "type": "text",
+        "value": "Device File System"
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_WEBC2_QBP",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "2010QBP"
+      },
+      {
+        "type": "text",
+        "value": "adobe_sl.exe"
+      },
+      {
+        "type": "text",
+        "value": "URLDownloadToCacheFile"
+      },
+      {
+        "type": "text",
+        "value": "dnsapi.dll"
+      },
+      {
+        "type": "text",
+        "value": "urlmon.dll"
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_WEBC2_HEAD",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Ready!"
+      },
+      {
+        "type": "text",
+        "value": "connect ok"
+      },
+      {
+        "type": "text",
+        "value": "WinHTTP 1.0"
+      },
+      {
+        "type": "text",
+        "value": "<head>"
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_WEBC2_GREENCAT",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "reader_sl.exe"
+      },
+      {
+        "type": "text",
+        "value": "MS80547.bat"
+      },
+      {
+        "type": "text",
+        "value": "ADR32"
+      },
+      {
+        "type": "text",
+        "value": "ControlService failed!"
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_WEBC2_DIV",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "3DC76854-C328-43D7-9E07-24BF894F8EF5"
+      },
+      {
+        "type": "text",
+        "value": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run"
+      },
+      {
+        "type": "text",
+        "value": "Hello from MFC!"
+      },
+      {
+        "type": "text",
+        "value": "Microsoft Internet Explorer"
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_RARSilent_EXE_PDF",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "WINRAR.SFX"
+      },
+      {
+        "type": "text",
+        "value": "Steup="
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_aspnetreport",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "aspnet_client/report.asp"
+      },
+      {
+        "type": "text",
+        "value": "name=%s&Gender=%c&Random=%04d&SessionKey=%s"
+      },
+      {
+        "type": "text",
+        "value": "rusinfo.exe"
+      },
+      {
+        "type": "text",
+        "value": "cmd.exe"
+      },
+      {
+        "type": "text",
+        "value": "AdobeUpdater.exe"
+      },
+      {
+        "type": "text",
+        "value": "buildout.exe"
+      },
+      {
+        "type": "text",
+        "value": "DefWatch.exe"
+      },
+      {
+        "type": "text",
+        "value": "d.exe"
+      },
+      {
+        "type": "text",
+        "value": "em.exe"
+      },
+      {
+        "type": "text",
+        "value": "IMSCMig.exe"
+      },
+      {
+        "type": "text",
+        "value": "localfile.exe"
+      },
+      {
+        "type": "text",
+        "value": "md.exe"
+      },
+      {
+        "type": "text",
+        "value": "mdm.exe"
+      },
+      {
+        "type": "text",
+        "value": "mimikatz.exe"
+      },
+      {
+        "type": "text",
+        "value": "msdev.exe"
+      },
+      {
+        "type": "text",
+        "value": "ntoskrnl.exe"
+      },
+      {
+        "type": "text",
+        "value": "p.exe"
+      },
+      {
+        "type": "text",
+        "value": "otepad.exe"
+      },
+      {
+        "type": "text",
+        "value": "reg.exe"
+      },
+      {
+        "type": "text",
+        "value": "regsvr.exe"
+      },
+      {
+        "type": "text",
+        "value": "runinfo.exe"
+      },
+      {
+        "type": "text",
+        "value": "AdobeUpdate.exe"
+      },
+      {
+        "type": "text",
+        "value": "inetinfo.exe"
+      },
+      {
+        "type": "text",
+        "value": "svehost.exe"
+      },
+      {
+        "type": "text",
+        "value": "update.exe"
+      },
+      {
+        "type": "text",
+        "value": "NTLMHash.exe"
+      },
+      {
+        "type": "text",
+        "value": "wpnpinst.exe"
+      },
+      {
+        "type": "text",
+        "value": "WSDbg.exe"
+      },
+      {
+        "type": "text",
+        "value": "xcmd.exe"
+      },
+      {
+        "type": "text",
+        "value": "adobeup.exe"
+      },
+      {
+        "type": "text",
+        "value": "0830.bin"
+      },
+      {
+        "type": "text",
+        "value": "1001.bin"
+      },
+      {
+        "type": "text",
+        "value": "a.bin"
+      },
+      {
+        "type": "text",
+        "value": "ISUN32.EXE"
+      },
+      {
+        "type": "text",
+        "value": "AcroRD32.EXE"
+      },
+      {
+        "type": "text",
+        "value": "INETINFO.EXE"
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_Revird_svc",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "nwwwks.dll"
+      },
+      {
+        "type": "text",
+        "value": "rdisk.dll"
+      },
+      {
+        "type": "text",
+        "value": "skeys.dll"
+      },
+      {
+        "type": "text",
+        "value": "SvcHost.DLL.log"
+      },
+      {
+        "type": "text",
+        "value": "InstallService"
+      },
+      {
+        "type": "text",
+        "value": "RundllInstallA"
+      },
+      {
+        "type": "text",
+        "value": "RundllUninstallA"
+      },
+      {
+        "type": "text",
+        "value": "ServiceMain"
+      },
+      {
+        "type": "text",
+        "value": "UninstallService"
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_dbg_mess",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Down file ok!"
+      },
+      {
+        "type": "text",
+        "value": "Send file ok!"
+      },
+      {
+        "type": "text",
+        "value": "Command Error!"
+      },
+      {
+        "type": "text",
+        "value": "Pls choose target first!"
+      },
+      {
+        "type": "text",
+        "value": "Alert!"
+      },
+      {
+        "type": "text",
+        "value": "Pls press enter to make sure!"
+      },
+      {
+        "type": "text",
+        "value": "Are you sure to "
+      },
+      {
+        "type": "text",
+        "value": "rusinfo.exe"
+      },
+      {
+        "type": "text",
+        "value": "cmd.exe"
+      },
+      {
+        "type": "text",
+        "value": "AdobeUpdater.exe"
+      },
+      {
+        "type": "text",
+        "value": "buildout.exe"
+      },
+      {
+        "type": "text",
+        "value": "DefWatch.exe"
+      },
+      {
+        "type": "text",
+        "value": "d.exe"
+      },
+      {
+        "type": "text",
+        "value": "em.exe"
+      },
+      {
+        "type": "text",
+        "value": "IMSCMig.exe"
+      },
+      {
+        "type": "text",
+        "value": "localfile.exe"
+      },
+      {
+        "type": "text",
+        "value": "md.exe"
+      },
+      {
+        "type": "text",
+        "value": "mdm.exe"
+      },
+      {
+        "type": "text",
+        "value": "mimikatz.exe"
+      },
+      {
+        "type": "text",
+        "value": "msdev.exe"
+      },
+      {
+        "type": "text",
+        "value": "ntoskrnl.exe"
+      },
+      {
+        "type": "text",
+        "value": "p.exe"
+      },
+      {
+        "type": "text",
+        "value": "otepad.exe"
+      },
+      {
+        "type": "text",
+        "value": "reg.exe"
+      },
+      {
+        "type": "text",
+        "value": "regsvr.exe"
+      },
+      {
+        "type": "text",
+        "value": "runinfo.exe"
+      },
+      {
+        "type": "text",
+        "value": "AdobeUpdate.exe"
+      },
+      {
+        "type": "text",
+        "value": "inetinfo.exe"
+      },
+      {
+        "type": "text",
+        "value": "svehost.exe"
+      },
+      {
+        "type": "text",
+        "value": "update.exe"
+      },
+      {
+        "type": "text",
+        "value": "NTLMHash.exe"
+      },
+      {
+        "type": "text",
+        "value": "wpnpinst.exe"
+      },
+      {
+        "type": "text",
+        "value": "WSDbg.exe"
+      },
+      {
+        "type": "text",
+        "value": "xcmd.exe"
+      },
+      {
+        "type": "text",
+        "value": "adobeup.exe"
+      },
+      {
+        "type": "text",
+        "value": "0830.bin"
+      },
+      {
+        "type": "text",
+        "value": "1001.bin"
+      },
+      {
+        "type": "text",
+        "value": "a.bin"
+      },
+      {
+        "type": "text",
+        "value": "ISUN32.EXE"
+      },
+      {
+        "type": "text",
+        "value": "AcroRD32.EXE"
+      },
+      {
+        "type": "text",
+        "value": "INETINFO.EXE"
+      }
+    ]
+  },
+  {
+    "name": "APT.APT1_known_malicious_RARSilent",
+    "description": "CommentCrew-threat-apt1",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Analysis And Outlook.doc"
+      },
+      {
+        "type": "text",
+        "value": "North Korean launch.pdf"
+      },
+      {
+        "type": "text",
+        "value": "Dollar General.doc"
+      },
+      {
+        "type": "text",
+        "value": "Dow Corning Corp.pdf"
+      }
+    ]
+  },
+  {
+    "name": "APT.clean_apt15_patchedcmd",
+    "description": "This is a patched CMD. This is the CMD that RoyalCli uses.",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "eisableCMD"
+      },
+      {
+        "type": "text",
+        "value": "%WINDOWS_COPYRIGHT%"
+      },
+      {
+        "type": "text",
+        "value": "Cmd.Exe"
+      },
+      {
+        "type": "text",
+        "value": "Windows Command Processor"
+      }
+    ]
+  },
+  {
+    "name": "APT.malware_apt15_royalcli_1",
+    "description": "Generic strings found in the Royal CLI tool",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "%s~clitemp%08x.tmp"
+      },
+      {
+        "type": "text",
+        "value": "qg.tmp"
+      },
+      {
+        "type": "text",
+        "value": "%s /c %s>%s"
+      },
+      {
+        "type": "text",
+        "value": "hkcmd.exe"
+      },
+      {
+        "type": "text",
+        "value": "%snewcmd.exe"
+      },
+      {
+        "type": "text",
+        "value": "%shkcmd.exe"
+      },
+      {
+        "type": "text",
+        "value": "%s~clitemp%08x.ini"
+      },
+      {
+        "type": "text",
+        "value": "myRObject"
+      },
+      {
+        "type": "text",
+        "value": "myWObject"
+      },
+      {
+        "type": "text",
+        "value": "10 %d %x\\x0D\\x0A"
+      },
+      {
+        "type": "text",
+        "value": "4 %s  %d\\x0D\\x0A"
+      },
+      {
+        "type": "text",
+        "value": "6 %s  %d\\x0D\\x0A"
+      },
+      {
+        "type": "text",
+        "value": "1 %s  %d\\x0D\\x0A"
+      },
+      {
+        "type": "text",
+        "value": "3 %s  %d\\x0D\\x0A"
+      },
+      {
+        "type": "text",
+        "value": "5 %s  %d\\x0D\\x0A"
+      },
+      {
+        "type": "text",
+        "value": "2 %s  %d 0 %d\\x0D\\x0A"
+      },
+      {
+        "type": "text",
+        "value": "2 %s  %d 1 %d\\x0D\\x0A"
+      },
+      {
+        "type": "text",
+        "value": "%s file not exist"
+      }
+    ]
+  },
+  {
+    "name": "APT.malware_apt15_royalcli_2",
+    "description": "APT15 RoyalCli backdoor",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "%shkcmd.exe"
+      },
+      {
+        "type": "text",
+        "value": "myRObject"
+      },
+      {
+        "type": "text",
+        "value": "%snewcmd.exe"
+      },
+      {
+        "type": "text",
+        "value": "%s~clitemp%08x.tmp"
+      },
+      {
+        "type": "text",
+        "value": "hkcmd.exe"
+      },
+      {
+        "type": "text",
+        "value": "myWObject"
+      }
+    ]
+  },
+  {
+    "name": "APT.malware_apt15_bs2005",
+    "description": "APT15 bs2005",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "%s&%s&%s&%s"
+      },
+      {
+        "type": "text",
+        "value": "%s\\%s"
+      },
+      {
+        "type": "text",
+        "value": "WarOnPostRedirect"
+      },
+      {
+        "type": "text",
+        "value": "WarnonZoneCrossing"
+      },
+      {
+        "type": "text",
+        "value": "^^^^^"
+      },
+      {
+        "type": "text",
+        "value": "IEharden"
+      },
+      {
+        "type": "text",
+        "value": "DEPOff"
+      },
+      {
+        "type": "text",
+        "value": "ShownVerifyBalloon"
+      },
+      {
+        "type": "text",
+        "value": "IEHardenIENoWarn"
+      }
+    ]
+  },
+  {
+    "name": "APT.malware_apt15_royaldll",
+    "description": "DLL implant, originally rights.dll and runs as a service",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "hex",
+        "value": "B8 A7 C6 67 4E 83 C1 02 BA 04 00 00 00 57 90"
+      },
+      {
+        "type": "hex",
+        "value": "0F B6 1C 03 8B 55 08 30 1C 17 47 3B 7D 0C"
+      },
+      {
+        "type": "hex",
+        "value": "68 (88|B8) (13|0B) 00 00 FF D6 4F 75 F6"
+      },
+      {
+        "type": "text",
+        "value": "Nwsapagent"
+      },
+      {
+        "type": "text",
+        "value": "\"%s\">>\"%s\"\\s.txt"
+      },
+      {
+        "type": "text",
+        "value": "myWObject"
+      },
+      {
+        "type": "text",
+        "value": "del c:\\windows\\temp\\r.exe /f /q"
+      },
+      {
+        "type": "text",
+        "value": "del c:\\windows\\temp\\r.ini /f /q"
+      }
+    ]
+  },
+  {
+    "name": "APT.malware_apt15_royaldll_2",
+    "description": "DNS backdoor used by APT15",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Svchost"
+      },
+      {
+        "type": "text",
+        "value": "netsvcs"
+      },
+      {
+        "type": "text",
+        "value": "%SystemRoot%\\System32\\svchost.exe -k netsvcs"
+      },
+      {
+        "type": "text",
+        "value": "SYSTEM\\CurrentControlSet\\Services\\"
+      },
+      {
+        "type": "text",
+        "value": "myWObject"
+      }
+    ]
+  },
+  {
+    "name": "APT.malware_apt15_exchange_tool",
+    "description": "This is a an exchange enumeration/hijacking tool used by an APT 15",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "subjectname"
+      },
+      {
+        "type": "text",
+        "value": "sendername"
+      },
+      {
+        "type": "text",
+        "value": "WebCredentials"
+      },
+      {
+        "type": "text",
+        "value": "ExchangeVersion"
+      },
+      {
+        "type": "text",
+        "value": "ExchangeCredentials"
+      },
+      {
+        "type": "text",
+        "value": "slfilename"
+      },
+      {
+        "type": "text",
+        "value": "EnumMail"
+      },
+      {
+        "type": "text",
+        "value": "EnumFolder"
+      },
+      {
+        "type": "text",
+        "value": "set_Credentials"
+      },
+      {
+        "type": "text",
+        "value": "/sbn"
+      },
+      {
+        "type": "text",
+        "value": "/list"
+      },
+      {
+        "type": "text",
+        "value": "/enum"
+      },
+      {
+        "type": "text",
+        "value": "/save"
+      },
+      {
+        "type": "text",
+        "value": "/v or /t is null"
+      },
+      {
+        "type": "text",
+        "value": "2007"
+      },
+      {
+        "type": "text",
+        "value": "2010"
+      },
+      {
+        "type": "text",
+        "value": "2010sp1"
+      },
+      {
+        "type": "text",
+        "value": "2010sp2"
+      },
+      {
+        "type": "text",
+        "value": "2013"
+      },
+      {
+        "type": "text",
+        "value": "2013sp1"
+      }
+    ]
+  },
+  {
+    "name": "APT.malware_apt15_generic",
+    "description": "Find generic data potentially relating to AP15 tools",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "myWObject"
+      },
+      {
+        "type": "text",
+        "value": "myRObject"
+      },
+      {
+        "type": "hex",
+        "value": "6A (02|03) 6A 00 6A 00 68 00 00 00 C0 50 FF 15"
+      }
+    ]
+  },
+  {
+    "name": "APT.StuxNet_Malware_1",
+    "description": "Stuxnet Sample - file malware.exe",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "hex",
+        "value": "8b 45 08 35 dd 79 19 ae 33 c9 8b 55 08 89 02 89"
+      },
+      {
+        "type": "hex",
+        "value": "74 36 8b 7f 08 83 ff 00 74 2e 0f b7 1f 8b 7f 04"
+      },
+      {
+        "type": "hex",
+        "value": "74 70 81 78 05 8d 54 24 04 75 1b 81 78 08 04 cd"
+      }
+    ]
+  },
+  {
+    "name": "APT.Stuxnet_Malware_2",
+    "description": "Stuxnet Sample - file 63e6b8136058d7a06dfff4034b4ab17a261cdf398e63868a601f77ddd1b32802",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "\\SystemRoot\\System32\\hal.dll"
+      }
+    ]
+  },
+  {
+    "name": "APT.StuxNet_dll",
+    "description": "Stuxnet Sample - file dll.dll",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "SUCKM3 FROM EXPLORER.EXE MOTH4FUCKA #@!"
+      }
+    ]
+  },
+  {
+    "name": "APT.Stuxnet_Shortcut_to",
+    "description": "Stuxnet Sample - file Copy of Shortcut to.lnk",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "\\\\.\\STORAGE#Volume#_??_USBSTOR#Disk&Ven_Kingston&Prod_DataTraveler_2.0&Rev_PMAP#5B6B098B97BE&0#{53f56307-b6bf-11d0-94f2-00a0c"
+      }
+    ]
+  },
+  {
+    "name": "APT.Stuxnet_Malware_3",
+    "description": "Stuxnet Sample - file ~WTR4141.tmp",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "SHELL32.DLL.ASLR."
+      },
+      {
+        "type": "text",
+        "value": "~WTR4141.tmp"
+      },
+      {
+        "type": "text",
+        "value": "~WTR4132.tmp"
+      },
+      {
+        "type": "text",
+        "value": "totalcmd.exe"
+      },
+      {
+        "type": "text",
+        "value": "wincmd.exe"
+      },
+      {
+        "type": "text",
+        "value": "{%08x-%08x-%08x-%08x}"
+      }
+    ]
+  },
+  {
+    "name": "APT.Stuxnet_Malware_4",
+    "description": "Stuxnet Sample - file 0d8c2bcb575378f6a88d17b5f6ce70e794a264cdc8556c8e812f0b5f9c709198",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "\\objfre_w2k_x86\\i386\\guava.pdb"
+      },
+      {
+        "type": "text",
+        "value": "MRxCls.sys"
+      },
+      {
+        "type": "text",
+        "value": "MRXNET.Sys"
+      }
+    ]
+  },
+  {
+    "name": "APT.Stuxnet_maindll_decrypted_unpacked",
+    "description": "Stuxnet Sample - file maindll.decrypted.unpacked.dll_",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "%SystemRoot%\\system32\\Drivers\\mrxsmb.sys;%SystemRoot%\\system32\\Drivers\\*.sys"
+      },
+      {
+        "type": "text",
+        "value": "<Actions Context=\"%s\"><Exec><Command>%s</Command><Arguments>%s,#%u</Arguments></Exec></Actions>"
+      },
+      {
+        "type": "text",
+        "value": "%SystemRoot%\\inf\\oem7A.PNF"
+      },
+      {
+        "type": "text",
+        "value": "%SystemRoot%\\inf\\mdmcpq3.PNF"
+      },
+      {
+        "type": "text",
+        "value": "%SystemRoot%\\inf\\oem6C.PNF"
+      },
+      {
+        "type": "text",
+        "value": "@abf varbinary(4096) EXEC @hr = sp_OACreate 'ADODB.Stream', @aods OUT IF @hr <> 0 GOTO endq EXEC @hr = sp_OASetProperty @"
+      },
+      {
+        "type": "text",
+        "value": "STORAGE#Volume#1&19f7e59c&0&"
+      },
+      {
+        "type": "text",
+        "value": "view MCPVREADVARPERCON as select VARIABLEID,VARIABLETYPEID,FORMATFITTING,SCALEID,VARIABLENAME,ADDRESSPARAMETER,PROTOKOLL,MAXLIMI"
+      }
+    ]
+  },
+  {
+    "name": "APT.Stuxnet_s7hkimdb",
+    "description": "Stuxnet Sample - file s7hkimdb.dll",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "S7HKIMDX.DLL"
+      },
+      {
+        "type": "hex",
+        "value": "8b 45 08 35 dd 79 19 ae 33 c9 8b 55 08 89 02 89"
+      },
+      {
+        "type": "hex",
+        "value": "74 36 8b 7f 08 83 ff 00 74 2e 0f b7 1f 8b 7f 04"
+      },
+      {
+        "type": "hex",
+        "value": "74 70 81 78 05 8d 54 24 04 75 1b 81 78 08 04 cd"
+      }
+    ]
+  },
+  {
+    "name": "APT.is",
+    "description": "Imported APT rule: is",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "old_infected_attributes = node_infected_attributes(graph)"
+      },
+      {
+        "type": "text",
+        "value": "NodeType.DISCONNECTED_COMPUTER"
+      },
+      {
+        "type": "text",
+        "value": "add_computer_nodes(graph, EdgeType.LOCAL_WIRELESS, router_node)"
+      }
+    ]
+  },
+  {
+    "name": "APT.BlackEnergy_BE_2",
+    "description": "Detects BlackEnergy 2 Malware",
+    "severity": "malicious",
+    "condition": "all",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "<description> Windows system utility service  </description>"
+      },
+      {
+        "type": "text",
+        "value": "WindowsSysUtility - Unicode"
+      },
+      {
+        "type": "text",
+        "value": "msiexec.exe"
+      },
+      {
+        "type": "text",
+        "value": "WinHelpW"
+      },
+      {
+        "type": "text",
+        "value": "ReadProcessMemory"
+      }
+    ]
+  },
+  {
+    "name": "APT.BlackEnergy_VBS_Agent",
+    "description": "Detects VBS Agent from BlackEnergy Report - file Dropbearrun.vbs",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "WshShell.Run \"dropbear.exe -r rsa -d dss -a -p 6789\", 0, false"
+      },
+      {
+        "type": "text",
+        "value": "WshShell.CurrentDirectory = \"C:\\WINDOWS\\TEMP\\Dropbear\\\""
+      },
+      {
+        "type": "text",
+        "value": "Set WshShell = CreateObject(\"WScript.Shell\")"
+      }
+    ]
+  },
+  {
+    "name": "APT.DropBear_SSH_Server",
+    "description": "Detects DropBear SSH Server (not a threat but used to maintain access)",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "Badly formatted command= authorized_keys option"
+      },
+      {
+        "type": "text",
+        "value": "This Dropbear program does not support '%s' %s algorithm"
+      },
+      {
+        "type": "text",
+        "value": "/etc/dropbear/dropbear_dss_host_key"
+      },
+      {
+        "type": "text",
+        "value": "/etc/dropbear/dropbear_rsa_host_key"
+      }
+    ]
+  },
+  {
+    "name": "APT.BlackEnergy_BackdoorPass_DropBear_SSH",
+    "description": "Detects the password of the backdoored DropBear SSH Server - BlackEnergy",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "passDs5Bu9Te7"
+      }
+    ]
+  },
+  {
+    "name": "APT.BlackEnergy_KillDisk_1",
+    "description": "Detects KillDisk malware from BlackEnergy",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "system32\\cmd.exe"
+      },
+      {
+        "type": "text",
+        "value": "system32\\icacls.exe"
+      },
+      {
+        "type": "text",
+        "value": "/c del /F /S /Q %c:\\*.*"
+      },
+      {
+        "type": "text",
+        "value": "shutdown /r /t %d"
+      },
+      {
+        "type": "text",
+        "value": "/C /Q /grant "
+      },
+      {
+        "type": "text",
+        "value": "%08X.tmp"
+      },
+      {
+        "type": "text",
+        "value": "/c format %c: /Y /X /FS:NTFS"
+      },
+      {
+        "type": "text",
+        "value": "/c format %c: /Y /Q"
+      },
+      {
+        "type": "text",
+        "value": "taskhost.exe"
+      },
+      {
+        "type": "text",
+        "value": "shutdown.exe"
+      }
+    ]
+  },
+  {
+    "name": "APT.BlackEnergy_KillDisk_2",
+    "description": "Detects KillDisk malware from BlackEnergy",
+    "severity": "malicious",
+    "condition": "any",
+    "patterns": [
+      {
+        "type": "text",
+        "value": "%c:\\~tmp%08X.tmp"
+      },
+      {
+        "type": "text",
+        "value": "%s%08X.tmp"
+      },
+      {
+        "type": "text",
+        "value": ".exe.sys.drv.doc.docx.xls.xlsx.mdb.ppt.pptx.xml.jpg.jpeg.ini.inf.ttf"
+      },
+      {
+        "type": "text",
+        "value": "%ls_%ls_%ls_%d.~tmp"
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "virusTotalApiKey": "30ff492de2ac3b6d95d1d115f6b7b347c794cfe1381a17e5ac95ebc594756504",
+  "onlineLookupEnabled": true,
+  "virusTotalEnabled": true,
+  "autoQuarantine": true,
+  "monitoredFolder": "E:\\anti\\monitored",
+  "quarantineFolder": "E:\\anti\\quarantine",
+  "shieldActive": true
+}

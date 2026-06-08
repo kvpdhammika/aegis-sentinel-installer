@@ -1,0 +1,16 @@
+{
+  "name": "aegis-sentinel",
+  "version": "1.0.0",
+  "description": "Auto-Updatable Antivirus Dashboard with VirusTotal and MalwareBazaar integration",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "chokidar": "^4.0.1",
+    "express": "^4.21.2"
+  }
+}

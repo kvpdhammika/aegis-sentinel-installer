@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aegis Sentinel - Threat Protection System</title>
+  <!-- SEO & Performance -->
+  <meta name="description" content="Aegis Sentinel is a premium, real-time local antivirus scanner and database manager with VirusTotal and MalwareBazaar integration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="img/dcc_logo.png" alt="DCC Sri Lanka Logo">
+        </div>
+        <div class="brand-text">
+          <h1>AEGIS</h1>
+          <span>SENTINEL</span>
+        </div>
+      </div>
+      
+      <nav class="nav-menu">
+        <button class="nav-item active" data-tab="dashboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="9" rx="1"/>
+            <rect x="14" y="3" width="7" height="5" rx="1"/>
+            <rect x="14" y="12" width="7" height="9" rx="1"/>
+            <rect x="3" y="16" width="7" height="5" rx="1"/>
+          </svg>
+          Dashboard
+        </button>
+        <button class="nav-item" data-tab="scanner">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          File Scanner
+        </button>
+        <button class="nav-item" data-tab="shield">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2a10 10 0 0 0-7.35 16.76L12 22l7.35-3.24A10 10 0 0 0 12 2zm0 17.5a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z"/>
+          </svg>
+          Real-time Shield
+        </button>
+        <button class="nav-item" data-tab="database">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+            <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/>
+          </svg>
+          Threat Database
+        </button>
+        <button class="nav-item" data-tab="processes">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
+            <line x1="6" y1="6" x2="6.01" y2="6"/>
+            <line x1="6" y1="18" x2="6.01" y2="18"/>
+          </svg>
+          Process Sentry
+        </button>
+        <button class="nav-item" data-tab="forensics">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Forensics Sentry
+        </button>
+        <button class="nav-item" data-tab="rollback">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 9.58A6 6 0 113.6 5.6M20 9.58v-6m0 6h-6"/>
+          </svg>
+          Rollback Center
+        </button>
+        <button class="nav-item" data-tab="hosts">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+          Hosts Sentry
+        </button>
+        <button class="nav-item" data-tab="rules">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+          Rules Center
+        </button>
+        <button class="nav-item" data-tab="quarantine">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 9.9-1"/>
+          </svg>
+          Quarantine
+          <span class="badge" id="quarantine-count-badge">0</span>
+        </button>
+        <button class="nav-item" data-tab="config">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+          Configurations
+        </button>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <div class="shield-indicator-group">
+          <div class="pulsing-shield active" id="footer-pulse"></div>
+          <div>
+            <div class="indicator-title">Real-time Shield</div>
+            <div class="indicator-status text-green" id="footer-status-text">Securing</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- Top header bar -->
+      <header class="top-header">
+        <div class="header-welcome">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <h2>Aegis Threat Center</h2>
+            <span style="font-size: 0.65rem; font-weight: 700; background: rgba(0, 242, 254, 0.12); border: 1px solid rgba(0, 242, 254, 0.25); color: var(--cyan); padding: 2px 8px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">Defence Cyber Command</span>
+          </div>
+          <p id="system-time">Active Session</p>
+        </div>
+        <div class="system-health-card">
+          <div class="health-icon" id="system-health-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <div class="health-details">
+            <span class="health-label">SYSTEM STATE</span>
+            <span class="health-status text-green" id="system-health-text">Fully Protected</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Content Views -->
+      <div class="view-panel">
+        
+        <!-- ==================== DASHBOARD VIEW ==================== -->
+        <section id="view-dashboard" class="tab-view active">
+          <div class="dashboard-grid">
+            
+            <!-- Overall Protection State (Left Column) -->
+            <div class="panel-card hero-protection-card">
+              <div class="glass-overlay"></div>
+              <div class="hero-content">
+                <div class="animated-shield-ring">
+                  <div class="ring outer"></div>
+                  <div class="ring inner"></div>
+                  <img src="img/dcc_logo.png" alt="DCC Sri Lanka Logo" class="dashboard-logo-img text-cyan" id="dashboard-shield-icon">
+                </div>
+                <h3 id="hero-title">System Secure</h3>
+                <p id="hero-desc">The database has signatures loaded, and real-time shield is monitoring for local threats.</p>
+                <div class="action-buttons-row">
+                  <button class="btn btn-primary" onclick="switchTab('scanner')">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    New Scan
+                  </button>
+                  <button class="btn btn-secondary" onclick="triggerDBUpdate()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                    Update DB
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stats Rows (Right Column) -->
+            <div class="stats-container-grid">
+              
+              <!-- Stat Card 1: Signatures -->
+              <div class="panel-card stat-card glow-cyan">
+                <div class="stat-icon bg-cyan-dim">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/>
+                  </svg>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-number" id="stat-signatures-count">0</span>
+                  <span class="stat-label">Malware Signatures</span>
+                </div>
+              </div>
+
+              <!-- Stat Card 2: Monitored Folders -->
+              <div class="panel-card stat-card glow-green">
+                <div class="stat-icon bg-green-dim">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                  </svg>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-number text-truncate" id="stat-monitored-path" style="font-size: 1rem; font-weight: 600; display: block; max-width: 170px;">Not Set</span>
+                  <span class="stat-label">Monitored Directory</span>
+                </div>
+              </div>
+
+              <!-- Stat Card 3: Threats Prevented -->
+              <div class="panel-card stat-card glow-red">
+                <div class="stat-icon bg-red-dim">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                    <line x1="12" y1="9" x2="12" y2="13"/>
+                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                  </svg>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-number" id="stat-quarantine-count">0</span>
+                  <span class="stat-label">Threats In Quarantine</span>
+                </div>
+              </div>
+
+              <!-- Stat Card 4: Last DB Update -->
+              <div class="panel-card stat-card glow-amber">
+                <div class="stat-icon bg-amber-dim">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <div class="stat-info">
+                  <span class="stat-number" id="stat-last-update" style="font-size: 1.1rem;">Never</span>
+                  <span class="stat-label">Last Signature Sync</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Quick Actions & Systems Info -->
+          <div class="dashboard-details-row">
+            <div class="panel-card flex-2">
+              <h3>Real-time Engine Logs</h3>
+              <p class="section-desc">Live activity and detection logs streaming from filesystem watchdog daemon</p>
+              <div class="terminal-log-panel" id="dashboard-console">
+                <div class="log-line system-msg">&gt; Aegis Sentinel Engine connected and ready. Monitoring filesystem logs...</div>
+              </div>
+            </div>
+            
+            <div class="panel-card flex-1">
+              <h3>Integrations Status</h3>
+              <div class="integration-status-list">
+                <div class="integration-item">
+                  <div class="integration-name">
+                    <strong>MalwareBazaar DB</strong>
+                    <span>IOC hash intelligence API</span>
+                  </div>
+                  <div class="status-indicator-tag active">Enabled</div>
+                </div>
+                <div class="integration-item">
+                  <div class="integration-name">
+                    <strong>VirusTotal API</strong>
+                    <span>Multi-engine cloud analysis</span>
+                  </div>
+                  <div class="status-indicator-tag" id="vt-integration-status">Config Required</div>
+                </div>
+                <div class="integration-item">
+                  <div class="integration-name">
+                    <strong>Offline Local DB</strong>
+                    <span>Local signatures repository</span>
+                  </div>
+                  <div class="status-indicator-tag active">Active</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== FILE SCANNER VIEW ==================== -->
+        <section id="view-scanner" class="tab-view">
+          <div class="panel-card">
+            <h3>Manual File & Directory Scanner</h3>
+            <p class="section-desc">Run on-demand high performance directory walking. Scans files against local threat signatures.</p>
+
+            <div class="scan-targets-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 24px;">
+              <div class="panel-card stat-card glow-cyan" style="margin-bottom: 0; padding: 20px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; gap: 8px;" onclick="triggerQuickScan()">
+                <div style="display: flex; align-items: center; gap: 12px; width: 100%;">
+                  <div class="stat-icon bg-cyan-dim" style="width: 36px; height: 36px; border-radius: 8px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                  </div>
+                  <strong style="color: white; font-size: 0.95rem;">Quick Scan</strong>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0;">Scan default monitored directory.</p>
+              </div>
+              
+              <div class="panel-card stat-card glow-green" style="margin-bottom: 0; padding: 20px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; gap: 8px;" onclick="triggerSystemDriveScan()">
+                <div style="display: flex; align-items: center; gap: 12px; width: 100%;">
+                  <div class="stat-icon bg-green-dim" style="width: 36px; height: 36px; border-radius: 8px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                  </div>
+                  <strong style="color: white; font-size: 0.95rem;">C: Drive Scan</strong>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0;">Scan primary operating system partition.</p>
+              </div>
+
+              <div class="panel-card stat-card glow-amber" style="margin-bottom: 0; padding: 20px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; gap: 8px;" onclick="triggerFullScan()">
+                <div style="display: flex; align-items: center; gap: 12px; width: 100%;">
+                  <div class="stat-icon bg-amber-dim" style="width: 36px; height: 36px; border-radius: 8px;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+                  </div>
+                  <strong style="color: white; font-size: 0.95rem;">Full System Scan</strong>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0;">Scan all active logical drives (C:\, D:\, etc.)</p>
+              </div>
+            </div>
+            
+            <div class="scan-controls-panel">
+              <div class="form-group flex-3">
+                <label for="scan-path-input">Scan Folder Path</label>
+                <div class="input-action-group">
+                  <input type="text" id="scan-path-input" placeholder="e.g. E:\anti\monitored">
+                  <button class="btn btn-secondary" onclick="scanCurrentMonitoredFolder()">Use Monitored Path</button>
+                </div>
+              </div>
+              <div class="btn-group flex-1">
+                <button class="btn btn-primary" id="btn-start-scan" onclick="triggerScan()">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  Scan Folder
+                </button>
+                <button class="btn btn-secondary d-none" id="btn-cancel-scan" onclick="controlScanRequest('cancel')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/></svg>
+                  Cancel
+                </button>
+              </div>
+            </div>
+
+            <!-- Scanner Active Progress Display -->
+            <div class="scan-progress-display d-none" id="scan-progress-box">
+              <div class="progress-info-row">
+                <span class="progress-status" id="scan-status-text">Scanning folder files...</span>
+                <span class="progress-percent" id="scan-progress-pct">0%</span>
+              </div>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="scan-progress-fill" style="width: 0%;"></div>
+              </div>
+              <div class="progress-stats-row">
+                <div>Files Scanned: <strong id="scan-stats-scanned">0/0</strong></div>
+                <div>Threats Identified: <strong class="text-red" id="scan-stats-threats">0</strong></div>
+                <div id="scan-current-file-box" class="text-truncate">Scanning: <span id="scan-current-file">init...</span></div>
+              </div>
+            </div>
+
+            <!-- Scanner Results Table -->
+            <div class="results-table-container">
+              <h4>Scan Results</h4>
+              <table class="data-table" id="scanner-results-table">
+                <thead>
+                  <tr>
+                    <th>File Name</th>
+                    <th>Status</th>
+                    <th>SHA-256 Hash</th>
+                    <th>Detection / Source</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="scanner-results-body">
+                  <tr>
+                    <td colspan="5" class="text-center text-muted">No scan run in this session. Start a scan above.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- ==================== REAL-TIME SHIELD VIEW ==================== -->
+        <section id="view-shield" class="tab-view">
+          <div class="panel-card">
+            <div class="shield-settings-header">
+              <div>
+                <h3>Real-time Shield (Active File Sentry)</h3>
+                <p class="section-desc">Instantly scan files on creation or modification in the monitored folder. Quarantines threats automatically.</p>
+              </div>
+              <div class="shield-toggle-container">
+                <span class="toggle-label" id="shield-active-label">Shield Enabled</span>
+                <label class="switch-toggle">
+                  <input type="checkbox" id="shield-toggle-cb" onchange="toggleShieldFromUI()">
+                  <span class="slider-round"></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="shield-status-overview">
+              <div class="shield-radar-display">
+                <div class="radar-circle" id="shield-radar-glow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="shield-big-icon" id="shield-vector-icon">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                  <div class="radar-sweep"></div>
+                </div>
+              </div>
+              <div class="shield-status-details flex-1">
+                <div class="detail-row">
+                  <span class="detail-name">Shield Status:</span>
+                  <span class="detail-val font-semibold text-green" id="shield-engine-status">Active</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-name">Watching Directory:</span>
+                  <span class="detail-val text-monospace text-truncate" id="shield-watched-path" style="max-width: 400px;">None</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-name">Auto-Quarantine Action:</span>
+                  <span class="detail-val text-red font-semibold">Enabled (Isolate immediately)</span>
+                </div>
+                <div class="detail-row">
+                  <span class="detail-name">API Fallback Lookups:</span>
+                  <span class="detail-val">Active (MalwareBazaar + VirusTotal)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="shield-log-section">
+              <h4>Shield Log console</h4>
+              <div class="terminal-log-panel large-console" id="shield-console">
+                <div class="log-line system-msg">&gt; Shield guard running. Waiting for filesystem events...</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== THREAT DATABASE VIEW ==================== -->
+        <section id="view-database" class="tab-view">
+          <div class="panel-card">
+            <h3>Local Malware Signature Repository</h3>
+            <p class="section-desc">Manage local malware hashes. aegis sentinel stores threat records locally for high performance offline scans.</p>
+
+            <div class="database-info-row">
+              <div class="db-metric-box">
+                <span class="metric-val" id="db-total-signatures">0</span>
+                <span class="metric-label">Malware Hashes Stored</span>
+              </div>
+              <div class="db-metric-box">
+                <span class="metric-val" id="db-file-size">0 KB</span>
+                <span class="metric-label">Local Signature File Size</span>
+              </div>
+              <div class="db-metric-box">
+                <span class="metric-val" id="db-last-updated-text">Never</span>
+                <span class="metric-label">Last Database Sync</span>
+              </div>
+            </div>
+
+            <div class="db-actions-card">
+              <h4>Database Operations</h4>
+              <p>Download the latest threat feeds. Hashes are fetched directly from MalwareBazaar recent export (IOCs updated in the last 48 hours).</p>
+              
+              <!-- DB Progress panel -->
+              <div class="updater-progress-panel d-none" id="updater-progress-box">
+                <div class="updater-status-row">
+                  <span id="updater-status-message">Downloading feed...</span>
+                  <div class="loader-spinner"></div>
+                </div>
+              </div>
+
+              <div class="btn-group gap-3 mt-3">
+                <button class="btn btn-primary" onclick="triggerDBUpdate()">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  Sync Recent Signatures
+                </button>
+                <button class="btn btn-secondary" onclick="confirmDBClear()">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 7l-.867 12.142A2 2 0 0 1 16.138 21H7.862a2 2 0 0 1-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v3M4 7h16"/></svg>
+                  Clear Database
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== QUARANTINE VIEW ==================== -->
+        <section id="view-quarantine" class="tab-view">
+          <div class="panel-card">
+            <h3>Quarantined threats</h3>
+            <p class="section-desc">Review and manage files quarantined by Aegis Sentinel. Quarantined files are moved, renamed, and neutralized to prevent code execution.</p>
+
+            <div class="results-table-container">
+              <table class="data-table" id="quarantine-table">
+                <thead>
+                  <tr>
+                    <th>Original Name</th>
+                    <th>Quarantined Date</th>
+                    <th>Original Location</th>
+                    <th>Neutralized ID</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="quarantine-list-body">
+                  <tr>
+                    <td colspan="5" class="text-center text-muted">No quarantined threats in registry. Your system is safe.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== PROCESS SENTRY VIEW ==================== -->
+        <section id="view-processes" class="tab-view">
+          <div class="panel-card">
+            <h3>Process Memory Sentry</h3>
+            <p class="section-desc">Inspect currently executing processes in system memory. Computes hashes of active binaries on disk to identify running threats.</p>
+
+            <div class="db-actions-card" style="margin-bottom: 24px;">
+              <div class="btn-group gap-3" style="margin-bottom: 0;">
+                <button class="btn btn-primary" id="btn-scan-processes" onclick="triggerProcessScan()">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                  Scan Running Memory
+                </button>
+              </div>
+            </div>
+
+            <div class="results-table-container">
+              <table class="data-table" id="processes-table">
+                <thead>
+                  <tr>
+                    <th>Process Name</th>
+                    <th>PID</th>
+                    <th>Memory</th>
+                    <th>Executable Location</th>
+                    <th>Security Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="processes-list-body">
+                  <tr>
+                    <td colspan="6" class="text-center text-muted">No memory scan completed. Click "Scan Running Memory" above.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== HOSTS SENTRY VIEW ==================== -->
+        <section id="view-hosts" class="tab-view">
+          <div class="panel-card">
+            <h3>Hosts Sentry (DNS Sinkhole)</h3>
+            <p class="section-desc">Prevent malware from communicating with remote Command & Control (C2) servers. Blocks outbound requests at the Windows DNS resolver level using URLhaus blocklists.</p>
+
+            <div class="database-info-row">
+              <div class="db-metric-box">
+                <span class="metric-val" id="hosts-blocked-count">0</span>
+                <span class="metric-label">Malicious Domains Sinkholed</span>
+              </div>
+              <div class="db-metric-box">
+                <span class="metric-val" id="hosts-system-status" style="font-size: 1.5rem; line-height: 2.2rem;">Inactive</span>
+                <span class="metric-label">System Hosts Status</span>
+              </div>
+              <div class="db-metric-box">
+                <span class="metric-val" id="hosts-last-sync" style="font-size: 1.1rem; line-height: 2.2rem;">Never</span>
+                <span class="metric-label">Last Sync Timestamp</span>
+              </div>
+            </div>
+
+            <div class="db-actions-card">
+              <h4>Sinkhole Controls</h4>
+              <p>Download URLhaus domain blocks, then click "Apply Blocklist" to append them to your system hosts file (requires administrator privileges). Click "Restore Hosts" to undo blocks.</p>
+
+              <div class="btn-group gap-3 mt-3">
+                <button class="btn btn-primary" onclick="syncHostsBlocklist()">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  Sync URLhaus Blocks
+                </button>
+                <button class="btn btn-secondary" style="color: var(--green);" onclick="applyHostsBlocklist()">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>
+                  Apply Blocklist to System
+                </button>
+                <button class="btn btn-secondary" style="color: var(--red);" onclick="removeHostsBlocklist()">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M19 7l-.867 12.142A2 2 0 0 1 16.138 21H7.862a2 2 0 0 1-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v3M4 7h16"/></svg>
+                  Restore System Hosts
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== RULES CENTER VIEW ==================== -->
+        <section id="view-rules" class="tab-view">
+          <div class="panel-card">
+            <h3>Rules Sentry (Custom Pattern Signatures)</h3>
+            <p class="section-desc">View active YARA-like text and hex patterns. The scanning engine checks binary headers and buffers against these signatures to spot packed executables and scripting web shells.</p>
+
+            <div class="db-actions-card" style="margin-bottom: 24px;">
+              <h4>Sync APT YARA Signatures</h4>
+              <p>Download and translate raw YARA rules for major APT groups (APT1, APT15, Stuxnet, BlackEnergy) from the community repository.</p>
+              <div class="btn-group gap-3 mt-3" style="margin-bottom: 0;">
+                <button class="btn btn-primary" id="btn-sync-apt-rules" onclick="syncAPTRules()">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  Sync APT YARA Rules
+                </button>
+              </div>
+            </div>
+
+            <div class="results-table-container">
+              <table class="data-table" id="rules-table">
+                <thead>
+                  <tr>
+                    <th>Rule Signature ID</th>
+                    <th>Threat Classification</th>
+                    <th>Match Condition</th>
+                    <th>Detection Profile Description</th>
+                  </tr>
+                </thead>
+                <tbody id="rules-list-body">
+                  <tr>
+                    <td colspan="4" class="text-center text-muted">Loading compiled rules list...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== FORENSICS SENTRY VIEW ==================== -->
+        <section id="view-forensics" class="tab-view">
+          <div class="panel-card">
+            <h3>Forensics Sentry (Attack Timeline)</h3>
+            <p class="section-desc">Analyze chronological threat timelines and security incident audit logs from the EDR agent daemon.</p>
+
+            <div class="db-actions-card" style="margin-bottom: 24px;">
+              <div class="btn-group gap-3" style="margin-bottom: 0;">
+                <button class="btn btn-primary" onclick="loadForensicsData()">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  Refresh Logs Timeline
+                </button>
+              </div>
+            </div>
+
+            <div class="results-table-container">
+              <table class="data-table" id="forensics-table">
+                <thead>
+                  <tr>
+                    <th>Timestamp</th>
+                    <th>Subsystem</th>
+                    <th>Severity</th>
+                    <th>Incident Summary</th>
+                    <th>Forensic Metadata</th>
+                  </tr>
+                </thead>
+                <tbody id="forensics-list-body">
+                  <tr>
+                    <td colspan="5" class="text-center text-muted">No forensic event logs recorded yet.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== ROLLBACK CENTER VIEW ==================== -->
+        <section id="view-rollback" class="tab-view">
+          <div class="panel-card">
+            <h3>Ransomware Rollback Center</h3>
+            <p class="section-desc">Restore files altered by ransomware or unauthorized processes back to their verified clean state.</p>
+
+            <div class="db-actions-card" style="margin-bottom: 24px;">
+              <div class="btn-group gap-3" style="margin-bottom: 0;">
+                <button class="btn btn-primary" onclick="loadRollbackData()">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                  Refresh Rollback Vault
+                </button>
+              </div>
+            </div>
+
+            <div class="results-table-container">
+              <table class="data-table" id="rollback-table">
+                <thead>
+                  <tr>
+                    <th>File Name</th>
+                    <th>Clean Backup Date</th>
+                    <th>Backup Size</th>
+                    <th>Original Absolute Path</th>
+                    <th>Recovery Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="rollback-list-body">
+                  <tr>
+                    <td colspan="5" class="text-center text-muted">No clean restore points registered in vault. Run scans to populate.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================== CONFIGS VIEW ==================== -->
+        <section id="view-config" class="tab-view">
+          <div class="panel-card">
+            <h3>System Settings & Integrations</h3>
+            <p class="section-desc">Configure antivirus engine options, directory settings, and threat APIs</p>
+
+            <form id="settings-form" onsubmit="saveConfigData(event)">
+              <div class="settings-grid">
+                
+                <!-- Section 1: Folders -->
+                <div class="settings-section">
+                  <h4>Directories</h4>
+                  
+                  <div class="form-group">
+                    <label for="config-monitored-folder">Monitored Directory</label>
+                    <input type="text" id="config-monitored-folder" required>
+                    <span class="field-hint">The folder observed by the Real-time Shield watcher daemon</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="config-quarantine-folder">Quarantine Directory</label>
+                    <input type="text" id="config-quarantine-folder" required>
+                    <span class="field-hint">Folder where quarantined threat files are neutralized and stored</span>
+                  </div>
+
+                  <div class="checkbox-group">
+                    <label class="checkbox-container">
+                      <input type="checkbox" id="config-auto-quarantine">
+                      <span class="checkmark"></span>
+                      Auto-Quarantine Detected Threats
+                    </label>
+                    <span class="field-hint pl-6">Automatically neutralize and move malicious files to the quarantine folder during scans</span>
+                  </div>
+
+                  <div class="checkbox-group" style="margin-top: 15px;">
+                    <label class="checkbox-container">
+                      <input type="checkbox" id="config-usb-autoscan">
+                      <span class="checkmark"></span>
+                      Enable USB Auto-Scanning
+                    </label>
+                    <span class="field-hint pl-6">Automatically scan removable USB drives for threats upon connection</span>
+                  </div>
+                </div>
+
+                <!-- Section 2: Online Check Options -->
+                <div class="settings-section">
+                  <h4>Threat Intelligence API Settings</h4>
+
+                  <div class="checkbox-group">
+                    <label class="checkbox-container">
+                      <input type="checkbox" id="config-online-lookup" onchange="toggleOnlineLookups(this.checked)">
+                      <span class="checkmark"></span>
+                      Enable Online Intelligence Lookups
+                    </label>
+                    <span class="field-hint pl-6">Allows querying external platforms when file hashes do not match local database</span>
+                  </div>
+
+                  <div class="online-settings-subset" id="online-settings-wrapper">
+                    <div class="checkbox-group">
+                      <label class="checkbox-container">
+                        <input type="checkbox" id="config-vt-enabled">
+                        <span class="checkmark"></span>
+                        Enable VirusTotal API Scans
+                      </label>
+                      <span class="field-hint pl-6">Query VirusTotal v3 files database for detections</span>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="config-vt-key">VirusTotal API Key</label>
+                      <input type="password" id="config-vt-key" placeholder="Enter VirusTotal API Key">
+                      <span class="field-hint">Used for VirusTotal analysis. Get a free key at virustotal.com</span>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 15px;">
+                      <label for="config-tf-key">ThreatFox API Key (Auth-Key)</label>
+                      <input type="password" id="config-tf-key" placeholder="Enter ThreatFox API Key">
+                      <span class="field-hint">Used to download ThreatFox IOC feeds. Get a free key at auth.abuse.ch</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="form-actions mt-4">
+                <button type="submit" class="btn btn-primary">Save Configurations</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="js/app.js?v=1.0.4"></script>
+</body>
+</html>
