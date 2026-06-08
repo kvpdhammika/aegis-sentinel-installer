@@ -153,4 +153,4 @@ Aegis Sentinel provides a REST API to facilitate EDR automation and integration 
 
 ## 🛡️ License
 
-Developed by Defence Cyber Command. All Rights Reserved.
+Developed by KVP Dhammika. All Rights Reserved.
