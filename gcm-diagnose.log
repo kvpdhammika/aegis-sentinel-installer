@@ -1,0 +1,196 @@
+﻿Diagnose log at 2026-06-08T08:06:18Z
+
+AppPath: C:\Program Files\Git\mingw64\bin\git-credential-manager.exe
+InstallDir: C:\Program Files\Git\mingw64\bin\
+Version: 2.1.2
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Windows
+OSVersion: 10.0 (build 26200)
+Reading environment variables... OK
+ Variables:
+HOMEPATH=\Users\DCC - COL Dammika
+DriverData=C:\Windows\System32\Drivers\DriverData
+COMPUTERNAME=DESKTOP-TJINKM1
+GIT_TRACE2_PARENT_SID=621afb00-6b6a-4228-8d3b-491632837d17
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+OneDrive=C:\Users\DCC - COL Dammika\OneDrive
+ChocolateyLastPathUpdate=C:\Program Files (x86)\Nmap\nmap.exe
+SESSIONNAME=Console
+TMP=C:\Users\DCC-CO~1\AppData\Local\Temp
+ANTIGRAVITY_TRAJECTORY_ID=fc4bc80d-fb1b-458a-b18d-4a0bb9fb8355
+LC_CTYPE=C.UTF-8
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.PY;.PYW;.CPL
+USERNAME=DCC - COL Dammika
+ANTIGRAVITY_EDITOR_APP_ROOT=e:\anti\Antigravity IDE\resources\app
+GIT_EXEC_PATH=C:/Program Files/Git/mingw64/libexec/git-core
+TEMP=C:\Users\DCC-CO~1\AppData\Local\Temp
+LOCALAPPDATA=C:\Users\DCC - COL Dammika\AppData\Local
+MSYSTEM=MINGW64
+TERM=xterm-256color
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 167 Stepping 1, GenuineIntel
+GOPATH=C:\Users\DCC - COL Dammika\go
+ProgramData=C:\ProgramData
+windir=C:\WINDOWS
+USERDOMAIN=DESKTOP-TJINKM1
+PROCESSOR_REVISION=a701
+EFC_10532_4126798990=1
+POWERSHELL_DISTRIBUTION_CHANNEL=MSI:Windows 10 Pro
+PROCESSOR_LEVEL=6
+NUMBER_OF_PROCESSORS=16
+TMPDIR=C:\Users\DCC-CO~1\AppData\Local\Temp
+VSCODE_IPC_HOOK=\\.\pipe\b507fbb0-1.107.0-main-sock
+ANTIGRAVITY_CSRF_TOKEN=3930d65e-a255-4de7-9f2b-9cdb7e701f74
+ProgramFiles(x86)=C:\Program Files (x86)
+PUBLIC=C:\Users\Public
+VSCODE_NLS_CONFIG={"userLocale":"en-us","osLocale":"en-us","resolvedLanguage":"en","defaultMessagesFile":"E:\\anti\\Antigravity IDE\\resources\\app\\out\\nls.messages.json","locale":"en-us","availableLanguages":{}}
+CommonProgramFiles=C:\Program Files (x86)\Common Files
+__PSLockDownPolicy=0
+ANTIGRAVITY_LS_ADDRESS=localhost:1635
+PLINK_PROTOCOL=ssh
+COLORTERM=truecolor
+ProgramFiles=C:\Program Files (x86)
+PATH=C:/Program Files/Git/mingw64/libexec/git-core;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\DCC - COL Dammika\bin;C:/Users/DCC - COL Dammika/.gemini/antigravity-ide/bin;C:\Program Files\Eclipse Adoptium\jre-17.0.8.101-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Python311\Scripts\;C:\Program Files\Python311\;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\CMake\bin;C:\Program Files\Go\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\PowerShell\7\;J:\anaconda3;J:\anaconda3\Library\mingw-w64\bin;J:\anaconda3\Library\usr\bin;J:\anaconda3\Library\bin;J:\anaconda3\Scripts;C:\Users\DCC - COL Dammika\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\DCC - COL Dammika\AppData\Local\Programs\Python\Python312\;H:\anaconda;H:\anaconda\Library\mingw-w64\bin;H:\anaconda\Library\usr\bin;H:\anaconda\Library\bin;H:\anaconda\Scripts;C:\Users\DCC - COL Dammika\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\PyCharm Community Edition 2023.1.1\bin;;C:\Users\DCC - COL Dammika\AppData\Roaming\npm;C:\Users\DCC - COL Dammika\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\Nmap;C:\Users\DCC - COL Dammika\go\bin;C:\Users\DCC - COL Dammika\AppData\Local\Programs\Ollama;E:\Anti\Antigravity IDE\bin
+ChocolateyInstall=C:\Program Files (x86)\Nmap\nmap.exe
+PyCharm Community Edition=C:\Program Files\JetBrains\PyCharm Community Edition 2023.1.1\bin;
+VSCODE_CODE_CACHE_PATH=C:\Users\DCC - COL Dammika\AppData\Roaming\Antigravity IDE\CachedData\def9583aef9852ff94cb0dea16ede9bb6b095b30
+ProgramW6432=C:\Program Files
+ANTIGRAVITY_SOURCE_METADATA={"tool":{"conversationId":"439054e5-6c0a-42e6-9f8e-9469c937b921","stepIndex":88,"toolCall":{"id":"otmjydo5","name":"run_command","argumentsJson":"{\"CommandLine\":\"git credential-manager diagnose\",\"Cwd\":\"e:\\\\aegis-sentinel-installer\",\"WaitMsBeforeAsync\":5000,\"toolAction\":\"Running git credential-manager diagnose\",\"toolSummary\":\"GCM diagnostics\"}","thinkingSignature":"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","originalName":"run_command"}}}
+HOME=C:\Users\DCC - COL Dammika
+ANTIGRAVITY_AGENT=1
+SystemRoot=C:\WINDOWS
+CommonProgramW6432=C:\Program Files\Common Files
+ZES_ENABLE_SYSMAN=1
+LOGONSERVER=\\DESKTOP-TJINKM1
+VSCODE_CWD=E:\anti\Antigravity IDE
+USERPROFILE=C:\Users\DCC - COL Dammika
+USERDOMAIN_ROAMINGPROFILE=DESKTOP-TJINKM1
+APPDATA=C:\Users\DCC - COL Dammika\AppData\Roaming
+HOMEDRIVE=C:
+EFC_10532_1592913036=1
+VSCODE_PID=21724
+PSModulePath=C:\Users\DCC - COL Dammika\OneDrive\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+VBOX_MSI_INSTALL_PATH=E:\oracle\
+CHROME_CRASHPAD_PIPE_NAME=\\.\pipe\crashpad_21724_TMEJROSVNSDWJKRA
+PROCESSOR_ARCHITEW6432=AMD64
+PROCESSOR_ARCHITECTURE=x86
+OS=Windows_NT
+ComSpec=C:\WINDOWS\system32\cmd.exe
+SystemDrive=C:
+PT8HOME=C:\Program Files\Cisco Packet Tracer 8.2.1
+OneDriveConsumer=C:\Users\DCC - COL Dammika\OneDrive
+ALLUSERSPROFILE=C:\ProgramData
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is 'C:\Users\DCC - COL Dammika\AppData\Local\Temp\'...
+Checking basic file I/O...
+Writing to temporary file 'C:\Users\DCC - COL Dammika\AppData\Local\Temp\00614a12a612b135f456b573'... OK
+Reading from temporary file 'C:\Users\DCC - COL Dammika\AppData\Local\Temp\00614a12a612b135f456b573'... OK
+Deleting temporary file 'C:\Users\DCC - COL Dammika\AppData\Local\Temp\00614a12a612b135f456b573'... OK
+Testing IFileSystem instance...
+UserHomePath: C:\Users\DCC - COL Dammika
+UserDataDirectoryPath: C:\Users\DCC - COL Dammika\.gcm
+GetCurrentDirectory(): E:\aegis-sentinel-installer
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com... OK
+Sending HEAD request to https://example.com... OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:1989/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.41.0.windows.1'
+Locating current repository... OK
+Git repository at 'E:/aegis-sentinel-installer/.git'
+Listing all Git configuration... OK
+Git configuration:
+file:C:/Program Files/Git/etc/gitconfig	diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig	http.sslbackend=openssl
+file:C:/Program Files/Git/etc/gitconfig	http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+file:C:/Program Files/Git/etc/gitconfig	core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig	core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig	core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig	pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig	credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig	init.defaultbranch=master
+file:C:/Users/DCC - COL Dammika/.gitconfig	user.name=DCC - COL Dammika
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=false
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	core.symlinks=false
+file:.git/config	core.ignorecase=true
+file:.git/config	remote.origin.url=https://github.com/kvpdhammika/aegis-sentinel-installer.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: C:\Users\DCC - COL Dammika\AppData\Local\.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: C:\Users\DCC - COL Dammika\AppData\Local\.IdentityService\msal.cache
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
